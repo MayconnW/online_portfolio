@@ -22,6 +22,7 @@ gem 'mysql2'
 gem 'rails_admin', '~> 1.0'
 gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
 gem "twitter-bootstrap-rails"
+gem "paperclip", "~> 5.0.0"
 
 #end Rails Adn
 

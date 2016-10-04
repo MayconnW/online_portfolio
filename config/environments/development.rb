@@ -37,6 +37,8 @@ Rails.application.configure do
   config.assets.raise_runtime_errors = true
   
   config.action_mailer.default_url_options = { host: '0.0.0.0', port: 8080 }
+  
+  Paperclip.options[:command_path] = "/usr/bin/"
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

@@ -21,6 +21,8 @@ Things you may want to cover:
 
 * Deployment instructions
 
+To run this project install imagick (follow the instructions in HowToInstallImagick.txt
+
 * ...
 
 

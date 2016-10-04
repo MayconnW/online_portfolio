@@ -7,6 +7,19 @@ pt-BR:
         restrict_dependent_destroy:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
           has_many: Não é possível excluir o registro pois existem %{record} dependentes
+    models:
+      event: 
+        one: Evento
+        other: Eventos
+    attributes:
+      event:
+        logo: Logo
+        brief: Exibir Depoimentos
+        perfil: Exibir Perfil
+        case: Exibir Case
+        name: Nome
+        event_url: Url do Evento
+        unify: Habilitar questões
   date:
     abbr_day_names:
     - Dom

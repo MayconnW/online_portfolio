@@ -13,14 +13,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-offset-5 col-md-3">
-                <%= form_tag(controller: "devise/sessions", action: "create", method: "post", class: "new_admin form-login") do %>
+                <%= form_tag(controller: "devise/sessions", action: "create", method: "post", class: "new_user form-login") do %>
                     
                 <!--<form class="new_admin" id="new_admin" action="/admins/sign_in" accept-charset="UTF-8" method="post" class="form-login">-->
                     <input name="utf8" type="hidden" value="✓">
                     <h4>Welcome back.</h4>
-                    <input autofocus="autofocus" type="email" value="" name="admin[email]" id="admin_email" class="form-control input-sm chat-input" placeholder="email">
+                    <input autofocus="autofocus" type="email" value="" name="user[email]" id="user_email" class="form-control input-sm chat-input" placeholder="email">
                     </br>
-                    <input autocomplete="off" type="password" name="admin[password]" id="admin_password" class="form-control input-sm chat-input" placeholder="password">
+                    <input autocomplete="off" type="password" name="user[password]" id="user_password" class="form-control input-sm chat-input" placeholder="password">
                     </br>
                     <div class="wrapper">
                         <span class="group-btn">    

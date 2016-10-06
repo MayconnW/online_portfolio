@@ -27,5 +27,12 @@ test:
   database: site_with_adm
 
 production:
-  <<: *default
-  database: site_with_adm
+  adapter: postgresql
+  encoding: utf8
+  username: aqqosqnbdjjftc
+  password: glP2-rfiVfx7oNrxYWH_ICvbse
+  host: ec2-23-23-225-98.compute-1.amazonaws.com
+  port: 5432
+  pool: 5
+  timeout: 5000
+  database: dfabor6e9f0k1g

@@ -24,6 +24,10 @@ gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
 gem "twitter-bootstrap-rails"
 gem "paperclip", "~> 5.0.0"
 
+group :production do
+  gem 'pg'
+end
+
 #end Rails Adn
 
 # Use jquery as the JavaScript library

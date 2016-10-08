@@ -33,10 +33,17 @@ class Supplier < ActiveRecord::Base
   before_validation { self.brief.clear if self.delete_brief == '1' }
   
    RailsAdmin.config do |config|
-    config.model 'Event' do
+    config.model 'Supplier' do
       list do
         field :id
         field :user
+      end
+      edit do
+        field :user
+        field :playlist
+        field :logo
+        field :case
+        field :brief
       end
     end
   end

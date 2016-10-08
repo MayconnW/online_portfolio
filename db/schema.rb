@@ -11,13 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161008184546) do
+ActiveRecord::Schema.define(version: 20161008211553) do
 
   create_table "activity_branches", force: :cascade do |t|
     t.string   "description", limit: 255
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
   end
+
+  create_table "cios", force: :cascade do |t|
+    t.string   "name",                 limit: 255
+    t.string   "phone",                limit: 255
+    t.string   "email",                limit: 255
+    t.string   "nick",                 limit: 255
+    t.integer  "company_id",           limit: 4
+    t.string   "picture_file_name",    limit: 255
+    t.string   "picture_content_type", limit: 255
+    t.integer  "picture_file_size",    limit: 4
+    t.datetime "picture_updated_at"
+    t.boolean  "status"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+  end
+
+  add_index "cios", ["company_id"], name: "index_cios_on_company_id", using: :btree
 
   create_table "companies", force: :cascade do |t|
     t.string   "name",              limit: 255
@@ -93,6 +110,7 @@ ActiveRecord::Schema.define(version: 20161008184546) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["role_id"], name: "index_users_on_role_id", using: :btree
 
+  add_foreign_key "cios", "companies"
   add_foreign_key "suppliers", "users"
   add_foreign_key "users", "roles"
 end

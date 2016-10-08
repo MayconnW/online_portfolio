@@ -12,4 +12,16 @@ class Cio < ActiveRecord::Base
   attr_accessor :delete_picture
   before_validation { self.picture.clear if self.delete_picture == '1' }
   
+  #exclude_fields_if do
+  ##      type == :datetime
+  #    end
+      
+  RailsAdmin.config do |config|
+    config.model 'Cio' do
+      list do
+        exclude_fields :photo, :email, :created_at, :updated_at
+      end
+    end
+  end
+  
 end

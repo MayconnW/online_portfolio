@@ -39,7 +39,11 @@ class Supplier < ActiveRecord::Base
         field :user
       end
       edit do
-        field :user
+        field :user do
+          #exclude_fields_if do
+          #  id == 1
+          #end
+        end
         field :playlist
         field :logo
         field :case

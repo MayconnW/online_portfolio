@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161008182453) do
+ActiveRecord::Schema.define(version: 20161008184546) do
 
   create_table "activity_branches", force: :cascade do |t|
     t.string   "description", limit: 255
@@ -52,6 +52,27 @@ ActiveRecord::Schema.define(version: 20161008182453) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "suppliers", force: :cascade do |t|
+    t.integer  "user_id",            limit: 4
+    t.string   "playlist",           limit: 255
+    t.string   "logo_file_name",     limit: 255
+    t.string   "logo_content_type",  limit: 255
+    t.integer  "logo_file_size",     limit: 4
+    t.datetime "logo_updated_at"
+    t.string   "case_file_name",     limit: 255
+    t.string   "case_content_type",  limit: 255
+    t.integer  "case_file_size",     limit: 4
+    t.datetime "case_updated_at"
+    t.string   "brief_file_name",    limit: 255
+    t.string   "brief_content_type", limit: 255
+    t.integer  "brief_file_size",    limit: 4
+    t.datetime "brief_updated_at"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  add_index "suppliers", ["user_id"], name: "index_suppliers_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
     t.string   "encrypted_password",     limit: 255, default: "", null: false
@@ -72,5 +93,6 @@ ActiveRecord::Schema.define(version: 20161008182453) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["role_id"], name: "index_users_on_role_id", using: :btree
 
+  add_foreign_key "suppliers", "users"
   add_foreign_key "users", "roles"
 end

@@ -7,6 +7,13 @@ class User < ActiveRecord::Base
   belongs_to :role
   before_create :set_default_role
   
+  #Se quiser alterar o campo de visualização pode se usar o comando
+  #config.label_methods.unshift(:display_name)
+  #em seguida criar a função com o nome sugerido
+  def name
+    "#{self.email}"
+  end
+  
   private
   def set_default_role
     self.role ||= Role.find_by_name('supplier')
@@ -14,6 +21,11 @@ class User < ActiveRecord::Base
   
   RailsAdmin.config do |config|
     config.model 'User' do
+      list do
+        field :id
+        field :email
+        field :role
+      end
       edit do
         field :email
         field :password

@@ -17,6 +17,12 @@ pt-BR:
       company:
         one: Empresa
         other: Empresas
+      user:
+        one: Usuário
+        other: Usuários
+      supplier:
+        one: Fornecedor
+        other: Fornecedores
     attributes:
       event:
         logo: Logo
@@ -33,6 +39,17 @@ pt-BR:
         state: Estado
         city: Cidade
         logo: Logo
+      user:
+        email: E-mail
+        password: Senha
+        password_confirmation: Confirmação de senha
+        role: Função
+      supplier:
+        user: Fornecedor
+        playlist: Playlist de depoimentos
+        logo: Logo
+        case: Imagem para case de sucesso
+        brief: Imagem para depoimentos
   date:
     abbr_day_names:
     - Dom

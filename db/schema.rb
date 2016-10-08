@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161004015420) do
+ActiveRecord::Schema.define(version: 20161008182453) do
+
+  create_table "activity_branches", force: :cascade do |t|
+    t.string   "description", limit: 255
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "name",              limit: 255
+    t.string   "state",             limit: 255
+    t.string   "city",              limit: 255
+    t.string   "logo_file_name",    limit: 255
+    t.string   "logo_content_type", limit: 255
+    t.integer  "logo_file_size",    limit: 4
+    t.datetime "logo_updated_at"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.string   "logo_file_name",    limit: 255

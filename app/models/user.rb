@@ -12,4 +12,15 @@ class User < ActiveRecord::Base
     self.role ||= Role.find_by_name('supplier')
   end
   
+  RailsAdmin.config do |config|
+    config.model 'User' do
+      edit do
+        field :email
+        field :password
+        field :password_confirmation
+        field :role
+      end
+    end
+  end
+  
 end

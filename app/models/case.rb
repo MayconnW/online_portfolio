@@ -1,5 +1,6 @@
-class Cio < ActiveRecord::Base
-  belongs_to :company
+class Case < ActiveRecord::Base
+  belongs_to :category_case
+  belongs_to :supplier
   
   has_attached_file :picture,
     :styles => {
@@ -12,12 +13,9 @@ class Cio < ActiveRecord::Base
   attr_accessor :delete_picture
   before_validation { self.picture.clear if self.delete_picture == '1' }
   
-  #exclude_fields_if do
-  ##      type == :datetime
-  #    end
-      
   RailsAdmin.config do |config|
-    config.model 'Cio' do
+    config.model 'Case' do
+      config.label_methods.unshift(:display_name)
       list do
         exclude_fields :picture, :email, :created_at, :updated_at
       end

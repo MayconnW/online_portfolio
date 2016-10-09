@@ -9,4 +9,12 @@ class Company < ActiveRecord::Base
   # add a delete_<asset_name> method: 
   attr_accessor :delete_logo
   before_validation { self.logo.clear if self.delete_logo == '1' }
+  
+  RailsAdmin.config do |config|
+    config.model 'Company' do
+      list do
+        exclude_fields :logo, :created_at, :updated_at
+      end
+    end
+  end
 end

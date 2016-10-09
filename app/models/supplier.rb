@@ -33,6 +33,7 @@ class Supplier < ActiveRecord::Base
   before_validation { self.brief.clear if self.delete_brief == '1' }
   
    RailsAdmin.config do |config|
+    config.label_methods.unshift(:display_name)
     config.model 'Supplier' do
       list do
         field :id
@@ -49,6 +50,12 @@ class Supplier < ActiveRecord::Base
         field :case
         field :brief
       end
+    end
+  end
+  
+  def display_name
+    if self.user != nil
+      "#{self.user.name}"
     end
   end
   

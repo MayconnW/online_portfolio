@@ -9,7 +9,6 @@ class Question < ActiveRecord::Base
         field :hide
       end
       edit do
-        field :id
         field :description
         field :hide
         field :answers

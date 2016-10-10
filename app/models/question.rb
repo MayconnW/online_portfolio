@@ -8,11 +8,6 @@ class Question < ActiveRecord::Base
         field :description
         field :hide
       end
-      edit do
-        field :description
-        field :hide
-        field :answers
-      end
     end
   end
   

@@ -6,9 +6,9 @@ class Answer < ActiveRecord::Base
   RailsAdmin.config do |config|
     config.model 'Answer' do
       visible false
-    end
-    edit do
-      field :description
+      edit do
+        field :description
+      end
     end
   end
   

@@ -7,6 +7,9 @@ class Answer < ActiveRecord::Base
     config.model 'Answer' do
       visible false
     end
+    edit do
+      field :description
+    end
   end
   
 end

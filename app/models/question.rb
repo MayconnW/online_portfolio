@@ -12,7 +12,7 @@ class Question < ActiveRecord::Base
         field :id
         field :description
         field :hide
-        field :answer
+        field :answers
       end
     end
   end

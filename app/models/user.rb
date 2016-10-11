@@ -14,13 +14,9 @@ class User < ActiveRecord::Base
     "#{self.email}"
   end
   
-  def issupplier
-    true
-  end
-  
   private
   def set_default_role
-    self.role ||= Role.find_by_name('supplier')
+    self.role ||= Role.find_by_name('admin')
   end
   
   RailsAdmin.config do |config|

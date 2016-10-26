@@ -24,6 +24,8 @@ gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
 gem "twitter-bootstrap-rails"
 gem "paperclip", "~> 5.0.0"
 gem 'pg'
+gem "font-awesome-rails"
+gem 'rich', github: 'bastiaanterhorst/rich'
 
 gem 'rails_12factor', group: :production
 

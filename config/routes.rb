@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-
-  root 'welcome#index'
+  mount Rich::Engine => '/rich', :as => 'rich'
   devise_for :users
-  
+  get 'welcome/index'
+  root 'welcome#index'
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

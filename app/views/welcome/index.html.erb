@@ -1,2 +1,31 @@
-<h1>Welcome#index</h1>
-<p>Sem permissões suficientes para acessar o Admin</p>
+
+    
+  <%= render partial: "header" %>
+  <div class="container sections-wrapper">
+    <div class="row">
+      
+      <div class="primary col-md-8 col-sm-12 col-xs-12">
+        <%= render partial: "aboutme" %>  
+        <%= render partial: "lastprojects" %>
+        <%= render partial: "otherprojects" %>  
+        <%= render partial: "experience" %>  
+      </div>
+        
+      <div class="secondary col-md-4 col-sm-12 col-xs-12">
+        <%= render partial: "sidehead" %>
+        <%= render partial: "skills" %>
+        <%= render partial: "testimonials" %>
+        <%= render partial: "courses" %>
+        <%= render partial: "idiom" %>
+      </div>
+    </div><!--//row-->
+  </div><!--//masonry-->
+    
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="container text-center">
+                <small class="copyright">Mayconn Willian Gomes de Oliveira - Desenvolvedor</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+    

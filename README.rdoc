@@ -26,5 +26,7 @@ After cloned the project follow this steps:
 
 9 - Log in now with your created user and see how the page is.
 
+Maybe you need to install the "imagick". Please follow this tutorial "HowToInstallImagick.txt".
+
 I hope that you like this project. And I will add more functions day after day.
 

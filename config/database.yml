@@ -19,10 +19,10 @@ development:
 production:
   adapter: postgresql
   encoding: utf8
-  username: aqqosqnbdjjftc
-  password: glP2-rfiVfx7oNrxYWH_ICvbse
-  host: ec2-23-23-225-98.compute-1.amazonaws.com
+  username: ynnkyqjyylpxhb
+  password: SlMs7-CD4iRzL23LrAoIVQhpYV
+  host: ec2-54-163-226-30.compute-1.amazonaws.com
   port: 5432
   pool: 5
   timeout: 5000
-  database: dfabor6e9f0k1g
+  database: d6b2c1p8q3npj8

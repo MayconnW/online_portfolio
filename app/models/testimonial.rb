@@ -4,6 +4,11 @@ class Testimonial < ActiveRecord::Base
   
   RailsAdmin.config do |config|
     config.model 'Testimonial' do
+      list do
+        field :owner_user
+        field :comment_user
+        field :description
+      end
       edit do
         field :owner_user
         field :comment_user

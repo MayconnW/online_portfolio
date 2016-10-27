@@ -1,5 +1,12 @@
 RailsAdmin.config do |config|
   
+  config.model 'Rich' do
+    visible false
+  end
+  
+  config.included_models = ["Course", "Testimonial", "Skill", "Idiom", "City", "State", "Configuration", "Project", "Work", "User"]
+  
+  
   require 'i18n'
   I18n.default_locale = 'pt-BR'
 
@@ -16,7 +23,7 @@ RailsAdmin.config do |config|
 
   config.actions do
     dashboard do
-      statistics false
+      statistics true
     end
     index                         # mandatory
     new

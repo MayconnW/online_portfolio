@@ -3,7 +3,11 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-  <title>Portif&oacutelio Mayconn Willian Gomes de Oliveira</title>
+  <title>
+    <% if current_user && current_user.role.name == 'user' %>
+      <%= "Portifólio #{current_user.name}" %>
+    <% end %>
+  </title>
   
   <%= # stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true 
   %>

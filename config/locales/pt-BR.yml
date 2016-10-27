@@ -8,76 +8,74 @@ pt-BR:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
           has_many: Não é possível excluir o registro pois existem %{record} dependentes
     models:
-      activity_branch:
-        one: Ramo de Atividade
-        other: Ramos de Atividades
-      case:
-        one: Case
-        other: Cases
-      category_case: 
-        one: Categoria de Case
-        other: Categorias de Case
-      cio: 
-        one: Cio
-        other: Cios
-      company:
-        one: Empresa
-        other: Empresas
-      event: 
-        one: Evento
-        other: Eventos
-      question:
-        one: Pergunta
-        other: Perguntas
-      supplier:
-        one: Fornecedor
-        other: Fornecedores
+      configuration:
+        one: Configuração 
+        other: Configurações
+      course:
+        one: Curso
+        other: Cursos
+      idiom:
+        one: Idioma
+        other: Idiomas
+      project:
+        one: Projeto
+        other: Projetos
+      skill:
+        one: Habilidade
+        other: Habilidades
+      testimonial:
+        one: Depoimento
+        other: Depoimentos
       user:
         one: Usuário
         other: Usuários
+      work:
+        one: Trabalho
+        other: Trabalhos
     attributes:
-      activity_branch:
+      configuration:
+        user: Usuário
+        title: Título
+        mark: Opção
+      course:
+        user: Usuário
+        name: Curso
+        institute: Instituição
+        begin_date: Data de Início
+        end_date: Data de Término
+        unfinished: Não Finalizado
+      idiom:
+        user: Usuário
+        title: Idioma
+        level: Level
+      project:
+        user: Usuário
+        title: Título
+        head: Principal
+        order: Ordem
+        open_source: Open Source
         description: Descrição
-      case:
-        category_case: Categoria do Case
-        picture: Foto
-        description: Descrição
-        supplier: Fornecedor
-      category_case: 
-        description: Descrição
-      cio:
-        name: Nome
-        phone: Telefone
-        email: E-mail
-        nick: Apelido
+        logo: Logo
+        link_app: Link do Site ou Aplicativo
+        link_github: Link no GitHub
+        Highlight: Principais Características
+      skill:
+        user: Usuário
+        title: Habilidade
+        level: Level
+      testimonial:
+        owner_user: Usuário que recebe o depoimento
+        comment_user: Usuário que faz o depoimento
+        description: Depoimento
+      work:
+        user: Usuário
         company: Empresa
-        picture: Foto
-        status: Status
-      company:
-        name: Empresa
-        state: Estado
-        city: Cidade
-        logo: Logo
-      event:
-        logo: Logo
-        brief: Exibir Depoimentos
-        perfil: Exibir Perfil
-        case: Exibir Case
-        name: Nome
-        event_url: Url do Evento
-        unify: Habilitar questões
-      question:
-        description: Descrição
-        hide: Esconder
-        answer:
-          one: Resposta
-          other: Respostas
-      supplier:
-        user: Fornecedor
-        playlist: Playlist de depoimentos
-        logo: Logo
-        case: Imagem para case de sucesso
-        brief: Imagem para depoimentos
+        link: Site da Empresa
+        role: Cargo
+        begin_date: Data de Início
+        end_date: Data de Término
+        actual: Ainda trabalho aqui
+        description: Descrição das funções exercidas
       user:
         email: E-mail
         password: Senha

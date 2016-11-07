@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161025194712) do
+ActiveRecord::Schema.define(version: 20161107124549) do
 
   create_table "cities", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -115,15 +115,15 @@ ActiveRecord::Schema.define(version: 20161025194712) do
   add_index "states", ["capital_id"], name: "index_states_on_capital_id", using: :btree
 
   create_table "testimonials", force: :cascade do |t|
-    t.integer  "owner_user",   limit: 4
-    t.integer  "comment_user", limit: 4
-    t.string   "description",  limit: 255
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.integer  "owner_user_id",   limit: 4
+    t.integer  "comment_user_id", limit: 4
+    t.string   "description",     limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
-  add_index "testimonials", ["comment_user"], name: "index_testimonials_on_comment_user", using: :btree
-  add_index "testimonials", ["owner_user"], name: "index_testimonials_on_owner_user", using: :btree
+  add_index "testimonials", ["comment_user_id"], name: "index_testimonials_on_comment_user", using: :btree
+  add_index "testimonials", ["owner_user_id"], name: "index_testimonials_on_owner_user", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255,   default: "", null: false
@@ -153,6 +153,7 @@ ActiveRecord::Schema.define(version: 20161025194712) do
     t.datetime "created_at",                                        null: false
     t.datetime "updated_at",                                        null: false
     t.integer  "role_id",                limit: 4
+    t.string   "url",                    limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

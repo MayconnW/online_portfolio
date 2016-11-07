@@ -1,8 +1,13 @@
 class WelcomeController < UserDefaultController
 
   def index
-    #@user = User.find 2
-    @user = current_user
+    
+    if params[:username]
+      @user = User.find_by url: params[:username]
+    else
+      @user = current_user
+    end
+    
     set_default_values_to_user
     temp = @user.projects.where(head: true).order(:order)
     if temp.size > 0

@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
   has_many :idioms
   before_create :set_default_role
   
+  validates :url, uniqueness: true, presence: true
+  
   has_attached_file :photo,
     :styles => {
       :thumb => "100x100#",
@@ -40,6 +42,7 @@ class User < ActiveRecord::Base
       list do
         field :id
         field :email
+        field :url
         field :role
       end
       edit do
@@ -47,7 +50,7 @@ class User < ActiveRecord::Base
         field :password
         field :password_confirmation
         field :role
-        
+        field :url
         field :name
         field :occupation
         field :photo
